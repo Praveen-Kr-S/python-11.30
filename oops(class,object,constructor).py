@@ -89,6 +89,89 @@ m1 = mobile("Samsung","S26","Red","12 GB","50 MP","125000")
 m2 = mobile("Apple","16 Pro","Black","16 GB","108 MP","145000")
 
 
+#Inheritance
+class Vehicle:
+    def data(self):
+        print("Vehicle Type : car,bus,two wheeler, three wheeler, etc..,")
+
+class Car(Vehicle):
+    brand = "Tata"
+    model = "Punch"
+    color = "Blue"
+
+#v = Vehicle()
+#v.data()
+# c = Car()
+# c.data()
+# print(c.brand,c.model,c.color)
+
+#Multi level inheritance
+#1.power
+#2.telephone -> call,power
+#3.phone -> power,call,songs
+#4.smartphone -> power,call,songs,internet
+
+class power:
+    name = "tesla"
+    def fun1(self):
+        print("Read to supply the power")
+class telephone(power):
+    def fun2(self):
+        print("Read to talk with your network")
+class phone(telephone):
+    def fun3(self):
+        print("Read to talk with friends and play the songs")
+class smartphone(phone):
+    def fun4(self):
+        print("Explore your profile in Internet")
+
+s = smartphone()
+# s.fun4()
+# s.fun3()
+# s.fun2()
+# s.fun1()
+# print(s.name)
+
+#Hierachical Inheritance
+class Upi:
+    def money_tranfer(self):
+        print("Money Transfer Logic")
+
+class Gpay(Upi):
+    def gpy_tranfer_request(self):
+        print("Gpay money transfer request activate")
+
+class paytm(Upi):
+    def paytm_tranfer_request(self):
+        print("paytm money transfer request activate")
+
+
+# g = Gpay()
+# g.gpy_tranfer_request()
+# g.money_tranfer()
+# p = paytm()
+# p.paytm_tranfer_request()
+# p.money_tranfer()
+
+
+#Multiple Inheritance
+
+class Camera:
+    def capture(self):
+        print("Take Beautiful Pictures..")
+
+class Radio:
+    def speacker(self):
+        print("Enjoy with super songs")
+
+class Mobile(Camera,Radio):
+    def all_access(self):
+        print("Explore the world with your mobile")
+
+m = Mobile()
+m.all_access()
+m.capture()
+m.speacker()
 
 
 
