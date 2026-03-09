@@ -175,3 +175,57 @@ m.speacker()
 
 
 
+#compile time polymorphism/method overloading
+"""
+#Single Class with single named functions
+#but we pass diffrent arguments in functions
+"""
+class cal:
+    def add(self,a=None,b=None,c=None,d=None):
+        if a!=None and b!=None and c!=None and d!=None:
+            print("Adding in 4 args ",a+b+c+d)
+        elif a!=None and b!=None and c!=None:
+            print("Adding in 3 args ",a+b+c)
+        elif a!=None and b!=None:
+            print("Adding in 2 args ",a+b)
+        else:
+            print("1 args ",a)
+c = cal()
+# c.add(1,2,3)
+# c.add(1,2)
+# c.add(1)
+# c.add(1,2,3,5)
+
+
+class telephone:
+    def call(self):
+        print("Talk with friends in wired connection")
+
+class phone(telephone):
+    def call(self):
+        super().call()
+        print("Talk with friends in wireless connection")
+
+class smartphone(phone):
+    def call(self):
+        super().call()
+        print("Talk with  your friends video call")
+
+sm = smartphone()
+# sm.call()
+
+
+#Operator overloading
+a = 10
+b = 3
+#integers ->ADD
+#string -> concadinate
+#print(a+"y")
+print(a.__add__("d"))
+print(a.__sub__("d"))
+print(a.__sub__(3))
+print(a.__mul__(4))
+print(a.__mul__("o"))
+
+
+
